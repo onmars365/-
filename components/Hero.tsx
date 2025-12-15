@@ -8,11 +8,17 @@ const Hero: React.FC = () => {
       {/* Background Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://picsum.photos/1920/1080?grayscale&blur=2"
-          alt="Intelligent Factory"
-          className="w-full h-full object-cover opacity-30"
+          src="/langkun-factory.png"
+          alt="朗坤智能制造产业园"
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            // Prevent infinite loop if fallback fails, and switch to a high-quality placeholder
+            e.currentTarget.onerror = null; 
+            e.currentTarget.src = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000";
+          }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-800 to-blue-900 mix-blend-multiply" />
+        {/* Adjusted overlay: Reduced opacity to 60% to ensure the factory image is more visible while keeping text readable */}
+        <div className="absolute inset-0 bg-slate-900/60" />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10 text-center md:text-left">

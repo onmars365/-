@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-sm text-slate-400">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-blue-500 mt-0.5 shrink-0" />
-                <span>湖北省黄冈市蕲春县<br/>智能制造产业园</span>
+                <span>湖北省黄冈市蕲春县<br/>朗坤产业园</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-blue-500 shrink-0" />
